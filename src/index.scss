@@ -1,0 +1,11 @@
+@import './vendor/_reset';
+
+* {
+    box-sizing: border-box;
+}
+
+@import './components/app/App';
+
+// Tasks
+// @import './components/tasks/qrCodeComponent/qrCodeComponent.scss';
+// @import './components/tasks/ageCalculatorApp/ageCalculatorApp.scss';
