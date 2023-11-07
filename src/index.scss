@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-@import './components/app/App';
+// Main
+// @import './components/app/App.scss';
+@import './components/projects/01-E-Signature-App/ESignatureApp.scss';
 
-// Tasks
-// @import './components/tasks/qrCodeComponent/qrCodeComponent.scss';
-// @import './components/tasks/ageCalculatorApp/ageCalculatorApp.scss';
+// Projects
