@@ -1,9 +1,7 @@
 .ESignatureApp {
     width: 100vw;
     height: 100vh;
-    // background
-    background: rgba(201, 189, 189, 0.7);
-    // /background
+    font-size: 1.5rem;
 
     .container {
         width: 100%;
@@ -18,16 +16,7 @@
     .up {
         display: flex;
         flex-direction: column;
-        gap: 1em;
 
-        .title {
-            font-weight: 900;
-            font-size: 1.6rem;
-        }
-
-        .description {
-            font-size: 1.2rem;
-        }
     }
 
     .down {
