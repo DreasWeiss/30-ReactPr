@@ -1,0 +1,31 @@
+.ESignatureApp {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(201, 189, 189, 0.7);
+}
+.ESignatureApp .container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ESignatureApp .up {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.ESignatureApp .up .title {
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+.ESignatureApp .up .description {
+  font-size: 1.2rem;
+}
+.ESignatureApp .down {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}/*# sourceMappingURL=ESignatureApp.css.map */
