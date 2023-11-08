@@ -22,25 +22,23 @@ export default function ESignatureApp() {
     }
     document.body.style.background = 'rgba(201, 189, 189, 0.7)';
     return (
-        <div className="ESignatureApp">
-            <div className="container">
-                <div className="up">
-                    <Title text={name} />
-                    <Title classes={'subtitle'} text={!date ? 'DoB' : date} />
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque sit neque ea deleniti iusto beatae. Temporibus dolore ipsa rerum adipisci quo doloremque quod nostrum deserunt non iusto atque, consequatur eaque corporis corrupti veniam distinctio quibusdam facere sequi ullam sit est itaque omnis? Quasi provident eius nemo, natus omnis corporis dolorem veritatis modi laboriosam corrupti, sequi, nisi in id laborum officia quibusdam debitis nostrum vitae placeat enim voluptatibus repellendus iste? Molestiae maiores aspernatur rem provident facere dignissimos pariatur amet repudiandae commodi!</p>
-                </div>
-                <div className="down">
-                    <input
-                        type="date"
-                        value={date}
-                        style={inputStyle}
-                        onChange={handleDateChange} />
-                    <input
-                        type="text"
-                        value={name}
-                        style={inputStyle}
-                        onChange={handleNameChange} />
-                </div>
+        <div className="ESignatureApp container">
+            <div className="up">
+                <Title text={name} classes={'text-center'} />
+                <Title classes={'subtitle'} text={!date ? 'DoB' : date} />
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ratione, quaerat voluptatem velit delectus quod magnam rerum nemo praesentium deserunt. Placeat ipsa debitis iure accusantium aliquid vel veritatis voluptatum laboriosam!</p>
+            </div>
+            <div className="down">
+                <input
+                    type="date"
+                    value={date}
+                    style={inputStyle}
+                    onChange={handleDateChange} />
+                <input
+                    type="text"
+                    value={name}
+                    style={inputStyle}
+                    onChange={handleNameChange} />
             </div>
 
         </div>

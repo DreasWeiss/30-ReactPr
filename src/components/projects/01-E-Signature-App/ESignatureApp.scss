@@ -1,17 +1,16 @@
 .ESignatureApp {
+    height: 100%;
+    width: 100%;
     font-size: 1.5rem;
-
-    .container {
-        text-align: center;
-        padding: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .up {
         display: flex;
         flex-direction: column;
+        text-align: center;
+        padding: 0 50px;
 
     }
 
@@ -19,6 +18,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        margin-bottom: 50px;
     }
 
 }
