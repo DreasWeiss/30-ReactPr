@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import Title from '../components/Title'
+import React, { useState } from 'react';
+import Title from '../components/Title';
+import './ESignatureApp.scss';
 
 export default function ESignatureApp() {
     const [name, setName] = useState('Ur Signature');
