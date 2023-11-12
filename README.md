@@ -1,6 +1,6 @@
 # 30-ReactPr
 
-In this repo I train 30+ projects on React course
+In this repo I train 30+ projects on React course from Udemy
 
 [Link to the course on Udemy](https://www.udemy.com/course/30-react-projects-learn-react-js-by-building-30-web-apps/)
 
