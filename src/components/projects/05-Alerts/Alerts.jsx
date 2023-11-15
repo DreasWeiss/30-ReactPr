@@ -1,9 +1,11 @@
 import React from 'react'
+import Alert from '../components/Alert'
 
 export default function Alerts() {
     return (
-        <div>
-            <h1>Hello world</h1>
+        <div className='container mx-auto'>
+            <Alert type={'success'} message={'Succesfull login'} />
+            <Alert type={'info'} message={'Time triggered'} delay={true} delayTime={1000} />
         </div>
     )
 }
