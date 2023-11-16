@@ -6,6 +6,7 @@ import RandomizeColors from '../projects/02-Randomize-Colors/RandomizeColors';
 import LikeMyPhoto from '../projects/03-Like-My-Photo/LikeMyPhoto';
 import Testimonials from '../projects/04-Testimonials/Testimonials';
 import Alerts from '../projects/05-Alerts/Alerts';
+import TemperatureController from '../projects/06-Temperature-Controller/TemperatureController';
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       {/* <RandomizeColors /> */}
       {/* <LikeMyPhoto /> */}
       {/* <Testimonials /> */}
-      <Alerts />
+      {/* <Alerts /> */}
+      <TemperatureController />
 
     </div>
   );
