@@ -7,7 +7,7 @@ import LikeMyPhoto from '../projects/03-Like-My-Photo/LikeMyPhoto';
 import Testimonials from '../projects/04-Testimonials/Testimonials';
 import Alerts from '../projects/05-Alerts/Alerts';
 import TemperatureController from '../projects/06-Temperature-Controller/TemperatureController';
-import DarkMode from '../projects/07-Dark-Mode/DarkMode';
+import LightDarkMode from '../projects/07-Light-and-Dark-Mode/LightDarkMode';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
       {/* <Testimonials /> */}
       {/* <Alerts /> */}
       {/* <TemperatureController /> */}
-      <DarkMode />
+      <LightDarkMode />
 
     </div>
   );
