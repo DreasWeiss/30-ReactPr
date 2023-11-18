@@ -1,11 +1,14 @@
-import React from 'react'
-import Button from '../components/Button'
+import React, { useState } from 'react'
+import Blog from './Blog'
+
 
 export default function LightDarkMode() {
+
+    const [theme, setTheme] = useState('light');
+
     return (
-        <div className='container'>
-            <h1>hello world</h1>
-            <Button text={'Dark'} onClick={() => console.log('click')} />
+        <div className='container p-1'>
+            <Blog theme={theme} />
         </div>
     )
 }
