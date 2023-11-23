@@ -29,6 +29,16 @@ export default function SlideToUnlock() {
         }
     }, [lockSliderValue]);
 
+    const handleLockScreen = (e) => {
+        setShowLockSlider(true);
+        setLockSliderValue(0);
+        setUiProps({
+            uiText: 'Unlock screen',
+            uiColor: '#eee',
+            uiBg: `url(${LockScreenImg}) center/cover no-repeat`
+        })
+    }
+
 
     return (
         <div className='container text-center d-flex flex-column border-20 shadow-md' style={{
@@ -45,7 +55,7 @@ export default function SlideToUnlock() {
                     handleInput={handleLockSliderInput}
                     sliderValue={lockSliderValue} />
             ) :
-                <AiFillUnlock className='unlockIcon' />
+                <AiFillUnlock className='unlockIcon' onClick={handleLockScreen} />
             }
 
 
