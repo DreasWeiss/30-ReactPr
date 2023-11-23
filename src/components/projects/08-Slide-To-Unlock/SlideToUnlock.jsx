@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import LockSlider from './LockSlider'
 import { AiFillUnlock } from 'react-icons/ai'
 import LockScreenImg from './img/road.jpg';
@@ -11,6 +11,25 @@ export default function SlideToUnlock() {
         uiBg: `url(${LockScreenImg}) center/cover no-repeat`
     });
     const [showLockSlider, setShowLockSlider] = useState(true);
+    const [lockSliderValue, setLockSliderValue] = useState(0);
+
+    const handleLockSliderInput = (e) => {
+        setLockSliderValue(e.target.value);
+        // console.log(lockSliderValue);
+    }
+
+    useEffect(() => {
+        if (lockSliderValue == 100) {
+            setShowLockSlider(false);
+            setUiProps({
+                uiText: 'Unlocked screen',
+                uiColor: '#eee',
+                uiBg: `url(${HomeScreenImg}) center/cover no-repeat`
+            })
+        }
+    }, [lockSliderValue]);
+
+
     return (
         <div className='container text-center d-flex flex-column border-20 shadow-md' style={{
             height: '70vh',
@@ -21,7 +40,10 @@ export default function SlideToUnlock() {
         }}>
             <h1 className="title" style={{ color: uiProps.uiColor }}>{uiProps.uiText}</h1>
             {showLockSlider ? (
-                <LockSlider width={'250px'} />
+                <LockSlider
+                    width={'250px'}
+                    handleInput={handleLockSliderInput}
+                    sliderValue={lockSliderValue} />
             ) :
                 <AiFillUnlock className='unlockIcon' />
             }
