@@ -9,6 +9,7 @@ import Alerts from '../projects/05-Alerts/Alerts';
 import TemperatureController from '../projects/06-Temperature-Controller/TemperatureController';
 import LightDarkMode from '../projects/07-Light-and-Dark-Mode/LightDarkMode';
 import SlideToUnlock from '../projects/08-Slide-To-Unlock/SlideToUnlock';
+import SliderToGrow from '../projects/09-SliderToGrow/SliderToGrow';
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
       {/* <Alerts /> */}
       {/* <TemperatureController /> */}
       {/* <LightDarkMode /> */}
-      <SlideToUnlock />
+      {/* <SlideToUnlock /> */}
+      <SliderToGrow />
 
     </div>
   );
