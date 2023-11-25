@@ -10,6 +10,7 @@ import TemperatureController from '../projects/06-Temperature-Controller/Tempera
 import LightDarkMode from '../projects/07-Light-and-Dark-Mode/LightDarkMode';
 import SlideToUnlock from '../projects/08-Slide-To-Unlock/SlideToUnlock';
 import SliderToGrow from '../projects/09-SliderToGrow/SliderToGrow';
+import HiddenSearchBar from '../projects/10-Hidden-Search-Bar/HiddenSearchBar';
 
 
 function App() {
@@ -23,8 +24,8 @@ function App() {
       {/* <TemperatureController /> */}
       {/* <LightDarkMode /> */}
       {/* <SlideToUnlock /> */}
-      <SliderToGrow />
-
+      {/* <SliderToGrow /> */}
+      <HiddenSearchBar />
     </div>
   );
 }
