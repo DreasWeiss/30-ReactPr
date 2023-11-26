@@ -26,7 +26,6 @@ function App() {
       {/* <SlideToUnlock /> */}
       {/* <SliderToGrow /> */}
       <HiddenSearchBar />
-      <HiddenSearchBar />
     </div>
   );
 }
