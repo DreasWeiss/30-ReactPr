@@ -1,0 +1,20 @@
+.ESignatureApp {
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ESignatureApp .up {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 50px;
+}
+.ESignatureApp .down {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}/*# sourceMappingURL=ESignatureApp.css.map */
