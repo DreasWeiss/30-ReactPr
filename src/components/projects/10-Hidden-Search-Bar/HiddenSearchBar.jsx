@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BsSearch } from 'react-icons/bs';
 
 
 export default function HiddenSearchBar() {
 
-    let body = (document.body.style.background = 'purple');
+    const [uiProps, setUiProps] = useState({
+        bg: 'purple',
+        shadow: '',
+        transitions: 'all .3s ease',
+        opacity: 0,
+        showSearchIcon: true,
+        borderBottomColor: '#fff'
+    });
+
+    let body = (document.body.style);
     let bsSearchStyle = {
         color: '#fff',
         fontSize: 50,
@@ -22,19 +31,55 @@ export default function HiddenSearchBar() {
         border: 'none',
         outline: 'none',
         background: 'transparent',
-        borderBottom: `1px solid #333`,
+        borderBottom: `1px solid ${uiProps.borderBottomColor}`,
         fontSize: '1.3rem',
         color: '#eee',
         boxShadow: '0px 55px 60px -15px rgba(0,0,0,.75)',
-        opacity: 0.9,
-        transitions: 'all .3s ease'
+        opacity: uiProps.opacity,
+        transition: 'all .3s ease'
     }
 
+    useEffect(() => {
+        body.background = uiProps.bg;
+        body.boxShadow = uiProps.shadow;
+        body.transition = uiProps.transitions;
+    }, [uiProps.shadow]);
+
+    const showSearch = () => {
+        setUiProps({
+            opacity: 1,
+            showSearchIcon: false
+        })
+    }
+
+    const handleSearchFocus = () => {
+        setUiProps({
+            shadow: 'inset 0 -60vh 30vw 200px rgba(0,0,0,0.8)',
+            borderBottomColor: 'green'
+        })
+    }
+
+    const handleSearchBlur = (e) => {
+        setUiProps({
+            shadow: 'none',
+            opacity: 0,
+            borderBottomColor: '#fff',
+            showSearchIcon: true
+        })
+    }
 
     return (
-        <div className='container'>
-            <input type="text" placeholder='Search...' style={inputStyle} />
-            <BsSearch style={bsSearchStyle} />
+        <div className='container' style={{ height: '100vh' }}>
+            <input
+                type="text"
+                placeholder='Search...'
+                style={inputStyle}
+                onFocus={handleSearchFocus}
+                onBlur={handleSearchBlur} />
+            {uiProps.showSearchIcon ?
+                <BsSearch
+                    style={bsSearchStyle}
+                    onClick={showSearch} /> : null}
         </div>
     )
 }
