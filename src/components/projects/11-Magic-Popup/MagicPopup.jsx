@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Title from '../components/Title'
 import Button from '../components/Button'
 import Popup from '../components/Popup'
@@ -6,10 +6,17 @@ import Popup from '../components/Popup'
 export default function MagicPopup() {
 
     const [trigger, setTrigger] = useState(false);
+    const [timeTrigger, setTimeTrigger] = useState(false);
 
     const triggerPopup = () => {
         setTrigger(true);
     }
+
+    useEffect(() => {
+        setTimeout(() => {
+            setTimeTrigger(true);
+        }, 3000)
+    }, []);
 
     return (
         <div className='container text-center'>
@@ -21,13 +28,20 @@ export default function MagicPopup() {
                 text={'Click me'}
                 btnClass={'btn-primary'}
                 onClick={triggerPopup} />
-            {trigger &&
-                <Popup
-                    type={'alert-info'}
-                    title={'Triggered PopUP :)'}
-                    text={'This popup was triggered by button'}
-                    handleClose={setTrigger} />
-            }
+            {/* {(trigger || timeTrigger) && */}
+            <Popup
+                type={'alert-info'}
+                title={'Triggered PopUP :)'}
+                text={'This popup was triggered by button'}
+                handleClose={setTrigger}
+                trigger={trigger} /> {' '}
+            {/* } */}
+            <Popup
+                type={'alert-danger'}
+                title={'3s Time triggered PopUP :)'}
+                text={'This popup was triggered by a timer'}
+                handleClose={setTimeTrigger}
+                trigger={timeTrigger} />
         </div>
     )
 }
