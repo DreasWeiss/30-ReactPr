@@ -11,6 +11,7 @@ import LightDarkMode from '../projects/07-Light-and-Dark-Mode/LightDarkMode';
 import SlideToUnlock from '../projects/08-Slide-To-Unlock/SlideToUnlock';
 import SliderToGrow from '../projects/09-SliderToGrow/SliderToGrow';
 import HiddenSearchBar from '../projects/10-Hidden-Search-Bar/HiddenSearchBar';
+import MagicPopup from '../projects/11-Magic-Popup/MagicPopup';
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
       {/* <LightDarkMode /> */}
       {/* <SlideToUnlock /> */}
       {/* <SliderToGrow /> */}
-      <HiddenSearchBar />
+      {/* <HiddenSearchBar /> */}
+      <MagicPopup />
     </div>
   );
 }
