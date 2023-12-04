@@ -29,19 +29,21 @@ export default function MagicPopup() {
                 btnClass={'btn-primary'}
                 onClick={triggerPopup} />
             {/* {(trigger || timeTrigger) && */}
-            <Popup
-                type={'alert-info'}
-                title={'Triggered PopUP :)'}
-                text={'This popup was triggered by button'}
-                handleClose={setTrigger}
-                trigger={trigger} /> {' '}
+            {trigger &&
+                <Popup
+                    type={'alert-info'}
+                    title={'Triggered PopUP :)'}
+                    text={'This popup was triggered by button'}
+                    handleClose={setTrigger}
+                    trigger={trigger} />
+            }
             {/* } */}
-            <Popup
+            {!trigger && <Popup
                 type={'alert-danger'}
                 title={'3s Time triggered PopUP :)'}
                 text={'This popup was triggered by a timer'}
                 handleClose={setTimeTrigger}
-                trigger={timeTrigger} />
+                trigger={timeTrigger} />}
         </div>
     )
 }
