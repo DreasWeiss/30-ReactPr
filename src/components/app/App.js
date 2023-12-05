@@ -12,6 +12,7 @@ import SlideToUnlock from '../projects/08-Slide-To-Unlock/SlideToUnlock';
 import SliderToGrow from '../projects/09-SliderToGrow/SliderToGrow';
 import HiddenSearchBar from '../projects/10-Hidden-Search-Bar/HiddenSearchBar';
 import MagicPopup from '../projects/11-Magic-Popup/MagicPopup';
+import ProjectProgressTracker from '../projects/12-Project-Progress-Tracker/ProjectProgressTracker';
 
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
       {/* <SlideToUnlock /> */}
       {/* <SliderToGrow /> */}
       {/* <HiddenSearchBar /> */}
-      <MagicPopup />
+      {/* <MagicPopup /> */}
+      <ProjectProgressTracker />
     </div>
   );
 }
