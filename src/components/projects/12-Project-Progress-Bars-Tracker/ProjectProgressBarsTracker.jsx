@@ -1,8 +1,16 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import Title from '../components/Title'
 import { ProgressBar } from '../components/ProgressBar';
 
 export default function ProjectProgressBarsTracker() {
+
+    const [comleted, setCompleted] = useState(0);
+
+    const projecData = [
+        { bgColor: '#dc3545', completed: 57 },
+        { bgColor: '#28a745', completed: 88 },
+        { bgColor: '#7633f9', completed: 20 }
+    ]
 
     const inputStyle = {
         width: 50,
@@ -47,7 +55,12 @@ export default function ProjectProgressBarsTracker() {
                 </li>
             </ul>
             {/* Progress Bars */}
-            <ProgressBar />
+            {projecData.map((data, idx) => (
+                <ProgressBar
+                    bgColor={data.bgColor}
+                    completed={data.completed}
+                    key={idx + 1} />
+            ))}
         </div>
     )
 }
