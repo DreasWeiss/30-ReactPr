@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import Title from '../components/Title'
+import { ProgressBar } from '../components/ProgressBar';
 
 export default function ProjectProgressBarsTracker() {
 
@@ -45,6 +46,8 @@ export default function ProjectProgressBarsTracker() {
                         onChange={(e) => console.log(e.target.value)} />
                 </li>
             </ul>
+            {/* Progress Bars */}
+            <ProgressBar />
         </div>
     )
 }
