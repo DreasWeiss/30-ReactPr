@@ -29,7 +29,7 @@ export default function ProjectProgressBarsTracker() {
 
     useEffect(() => {
         uiInput.current.focus();
-    })
+    }, [])
 
     return (
         <div className='container container-sm mx-auto text-center'>
