@@ -4,12 +4,17 @@ import { ProgressBar } from '../components/ProgressBar';
 
 export default function ProjectProgressBarsTracker() {
 
-    const [comleted, setCompleted] = useState(0);
+    const [completed, setCompleted] = useState(0);
+    const [status, setStatus] = useState({
+        ui: 55,
+        ux: 87,
+        data: 34
+    });
 
     const projecData = [
-        { bgColor: '#dc3545', completed: 57 },
-        { bgColor: '#28a745', completed: 88 },
-        { bgColor: '#7633f9', completed: 20 }
+        { bgColor: '#dc3545', completed: status.ui },
+        { bgColor: '#28a745', completed: status.ux },
+        { bgColor: '#7633f9', completed: status.data }
     ]
 
     const inputStyle = {
@@ -35,23 +40,23 @@ export default function ProjectProgressBarsTracker() {
                     UI status:  <input
                         type="number"
                         style={inputStyle}
-                        value={''}
+                        value={status.ui}
                         ref={uiInput}
-                        onChange={(e) => console.log(e.target.value)} />
+                        onChange={(e) => setStatus({ ...status, ui: e.target.value })} />
                 </li>
                 <li>
                     UX status:  <input
                         type="number"
                         style={inputStyle}
-                        value={''}
-                        onChange={(e) => console.log(e.target.value)} />
+                        value={status.ux}
+                        onChange={(e) => setStatus({ ...status, ux: e.target.value })} />
                 </li>
                 <li>
                     DATA status:  <input
                         type="number"
                         style={inputStyle}
-                        value={''}
-                        onChange={(e) => console.log(e.target.value)} />
+                        value={status.data}
+                        onChange={(e) => setStatus({ ...status, data: e.target.value })} />
                 </li>
             </ul>
             {/* Progress Bars */}
