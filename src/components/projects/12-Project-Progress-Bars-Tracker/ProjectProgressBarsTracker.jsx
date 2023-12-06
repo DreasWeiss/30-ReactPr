@@ -29,6 +29,7 @@ export default function ProjectProgressBarsTracker() {
 
     useEffect(() => {
         uiInput.current.focus();
+        setInterval(() => setCompleted(Math.floor(Math.random() * 100) + 1), 2000)
     }, [])
 
     return (
@@ -66,6 +67,11 @@ export default function ProjectProgressBarsTracker() {
                     completed={data.completed}
                     key={idx + 1} />
             ))}
+
+            <Title text={'My energy lvl'} classes={'subtitle'} />
+            <ProgressBar
+                bgColor={completed > 50 ? '#dc3545' : '#28a745'}
+                completed={completed} />
         </div>
     )
 }
