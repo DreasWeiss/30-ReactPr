@@ -13,6 +13,7 @@ import SliderToGrow from '../projects/09-SliderToGrow/SliderToGrow';
 import HiddenSearchBar from '../projects/10-Hidden-Search-Bar/HiddenSearchBar';
 import MagicPopup from '../projects/11-Magic-Popup/MagicPopup';
 import ProjectProgressBarsTracker from '../projects/12-Project-Progress-Bars-Tracker/ProjectProgressBarsTracker';
+import DialogBox from '../projects/13-Dialog-Box/DialogBox';
 
 
 function App() {
@@ -29,7 +30,8 @@ function App() {
       {/* <SliderToGrow /> */}
       {/* <HiddenSearchBar /> */}
       {/* <MagicPopup /> */}
-      <ProjectProgressBarsTracker />
+      {/* <ProjectProgressBarsTracker /> */}
+      <DialogBox />``
     </div>
   );
 }
