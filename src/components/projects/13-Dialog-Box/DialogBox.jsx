@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Button from '../components/Button'
 import { BsFillEmojiFrownFill, BsFillEmojiSmileFill } from 'react-icons/bs'
+import './Bounce.css'
 
 export default function DialogBox({ width = 350 }) {
     const [subscription, setSubscription] = useState({
@@ -29,15 +30,28 @@ export default function DialogBox({ width = 350 }) {
     }
 
     const [icon, setIcon] = useState();
-    let iconStyle = {};
+    let iconStyle = {
+        fontSize: '80px',
+        justifySelf: 'center',
+        color: subscription.state === 'subscribed' ?
+            'rgba(59,137,90,0.4)' : 'rgba(26,118,160,0.4)'
+    };
 
     useEffect(() => {
         subscription.state === 'subscribed' && setIcon(<BsFillEmojiSmileFill style={iconStyle} />)
         subscription.state === 'unsubscribed' && setIcon(<BsFillEmojiFrownFill style={iconStyle} />)
     }, [subscription.state])
 
+    const [bounce, setBounce] = useState('');
+    useEffect(() => {
+        setTimeout(() => {
+            setBounce('');
+        }, 500)
+        return () => setBounce('bounce')
+    }, [subscription.state])
+
     return (
-        <div className='card bg-light m-auto mt-4' style={{ width: width }}>
+        <div className={`card bg-light m-auto mt-4 ${bounce}`} style={{ width: width }}>
             <div className="card-body">
                 <div
                     className="d-grid"
