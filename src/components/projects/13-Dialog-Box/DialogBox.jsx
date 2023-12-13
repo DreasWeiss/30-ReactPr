@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Button from '../components/Button'
 import { BsFillEmojiFrownFill, BsFillEmojiSmileFill } from 'react-icons/bs'
 
@@ -19,8 +19,22 @@ export default function DialogBox({ width = 350 }) {
         })
     }
 
+    const handleUnsubscribe = () => {
+        setSubscription({
+            title: 'Sorry',
+            description: 'to see you go',
+            state: 'unsubscribed',
+            justifyContent: 'flex-end'
+        })
+    }
+
     const [icon, setIcon] = useState();
     let iconStyle = {};
+
+    useEffect(() => {
+        subscription.state === 'subscribed' && setIcon(<BsFillEmojiSmileFill style={iconStyle} />)
+        subscription.state === 'unsubscribed' && setIcon(<BsFillEmojiFrownFill style={iconStyle} />)
+    }, [subscription.state])
 
     return (
         <div className='card bg-light m-auto mt-4' style={{ width: width }}>
@@ -47,7 +61,7 @@ export default function DialogBox({ width = 350 }) {
                 {subscription.state === 'subscribed' ? null : (
                     < Button text={'Subscribe'} btnClass={'btn-danger'} onClick={handleSubscribe} />)}
                 {subscription.state === 'subscribed' ? (
-                    <Button text={'Unsubscribe'} btnClass={'btn-danger btn-block'} />) : null}
+                    <Button text={'Unsubscribe'} btnClass={'btn-danger btn-block'} onClick={handleUnsubscribe} />) : null}
             </div>
         </div>
     )
