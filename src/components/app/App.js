@@ -15,6 +15,7 @@ import MagicPopup from '../projects/11-Magic-Popup/MagicPopup';
 import ProjectProgressBarsTracker from '../projects/12-Project-Progress-Bars-Tracker/ProjectProgressBarsTracker';
 import DialogBox from '../projects/13-Dialog-Box/DialogBox';
 import SearchFilterApp from '../projects/14-Search-Filter-App/SearchFilterApp';
+import FormRegistrationWithValidation from '../projects/15-Simple-Form-Registration-with-Validation/FormRegistrationWithValidation';
 
 
 function App() {
@@ -33,7 +34,8 @@ function App() {
       {/* <MagicPopup /> */}
       {/* <ProjectProgressBarsTracker /> */}
       {/* <DialogBox /> */}
-      <SearchFilterApp />
+      {/* <SearchFilterApp /> */}
+      <FormRegistrationWithValidation />
     </div>
   );
 }
