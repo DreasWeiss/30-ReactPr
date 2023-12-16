@@ -4,6 +4,8 @@ export default function FormRegistrationWithValidation() {
     return (
         <div>
             <h1>Form here</h1>
+            <h1>Form here</h1>
+            <h1>Form here</h1>
         </div>
     )
 }
