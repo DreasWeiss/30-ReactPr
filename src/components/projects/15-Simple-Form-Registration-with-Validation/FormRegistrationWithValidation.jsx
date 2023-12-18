@@ -25,6 +25,9 @@ export default function FormRegistrationWithValidation() {
                     <Button
                         btnClass={'btn-primary btn-lg btn-block'}
                         text={'Register'} />
+                    <Button
+                        btnClass={'btn-primary btn-lg btn-block'}
+                        text={'Register'} />
                 </form>
             </div>
 
