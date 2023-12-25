@@ -7,7 +7,6 @@ export default function FormRegistrationWithValidation() {
     return (
         <div className='m-auto'>
             {/* Form Design */}
-            {/* Form Design */}
             <div className="container m-auto mt-4 p-2 shadow-sm border-5">
                 <Title text={'Registration'} />
                 <form>
