@@ -17,6 +17,8 @@ export default function FormRegistrationWithValidation() {
         password: ''
     });
 
+    const [submit, setSubmit] = useState(false);
+
     const handleNameChange = (e) => {
         setValues({ ...values, user_name: e.target.value })
     }
@@ -39,6 +41,8 @@ export default function FormRegistrationWithValidation() {
         } else if (!values.password) {
             inputPassword.current.focus();
         }
+
+        setSubmit(true);
     }
 
     return (
@@ -54,7 +58,9 @@ export default function FormRegistrationWithValidation() {
                             ref={inputName}
                             value={values.user_name}
                             onChange={handleNameChange} />
-                        <label className="text-danger fs-sm">Please enter your username</label>
+                        {submit && !values.user_name ? (
+                            <label label className="text-danger fs-sm">Please enter your username</label>
+                        ) : null}
                     </div>
                     <div className="form-group">
                         <input
@@ -63,7 +69,9 @@ export default function FormRegistrationWithValidation() {
                             ref={inputEmail}
                             value={values.email}
                             onChange={handleEmailChange} />
-                        <label className="text-danger fs-sm">Please enter your email</label>
+                        {submit && !values.email ? (
+                            <label className="text-danger fs-sm">Please enter your email</label>
+                        ) : null}
                     </div>
                     <div className="form-group">
                         <input
@@ -72,14 +80,16 @@ export default function FormRegistrationWithValidation() {
                             ref={inputPassword}
                             value={values.password}
                             onChange={handlePasswordChange} />
-                        <label className="text-danger fs-sm">Please enter your password</label>
+                        {submit && !values.password ? (
+                            <label className="text-danger fs-sm">Please enter your password</label>
+                        ) : null}
                     </div>
                     <Button
                         btnClass={'btn-primary btn-lg btn-block'}
                         text={'Register'} />
                 </form>
-            </div>
+            </div >
 
-        </div>
+        </div >
     )
 }
