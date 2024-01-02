@@ -16,6 +16,7 @@ import ProjectProgressBarsTracker from '../projects/12-Project-Progress-Bars-Tra
 import DialogBox from '../projects/13-Dialog-Box/DialogBox';
 import SearchFilterApp from '../projects/14-Search-Filter-App/SearchFilterApp';
 import FormRegistrationWithValidation from '../projects/15-Simple-Form-Registration-with-Validation/FormRegistrationWithValidation';
+import NotesApp from '../projects/16-Notes-App/NotesApp';
 
 
 function App() {
@@ -35,7 +36,8 @@ function App() {
       {/* <ProjectProgressBarsTracker /> */}
       {/* <DialogBox /> */}
       {/* <SearchFilterApp /> */}
-      <FormRegistrationWithValidation />
+      {/* <FormRegistrationWithValidation /> */}
+      <NotesApp />
     </div>
   );
 }
