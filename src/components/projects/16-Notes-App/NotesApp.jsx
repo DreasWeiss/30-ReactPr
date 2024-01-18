@@ -18,6 +18,20 @@ export default function NotesApp() {
     const deleteNote = (id) => {
         setNotes(notes.filter((note) => note.id !== id))
     }
+
+    const cards = [
+        'card-info',
+        'card-danger',
+        'card-primary',
+        'card-success',
+        'card-warning'
+    ];
+
+    const randomizeBg = () => {
+        const random = Math.floor(Math.random() * cards.length);
+        return cards[random];
+    }
+
     return (
         <div className='container'>
             <Button
@@ -28,7 +42,11 @@ export default function NotesApp() {
                 className="container container-sm d-flex"
                 style={{ gap: 25, flexWrap: 'wrap' }}>
                 {notes.map((note) => (
-                    <NewNote key={note.id} note={note} onClick={deleteNote} />
+                    <NewNote
+                        key={note.id}
+                        note={note}
+                        onClick={deleteNote}
+                        cardBg={randomizeBg} />
                 ))}
                 {/* {notes.map((n) => console.log(n.id))} */}
             </div>
