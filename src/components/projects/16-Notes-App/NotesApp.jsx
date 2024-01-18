@@ -14,6 +14,10 @@ export default function NotesApp() {
         // console.log(newNotes);
         setNotes(newNotes);
     }
+
+    const deleteNote = (id) => {
+        setNotes(notes.filter((note) => note.id !== id))
+    }
     return (
         <div className='container'>
             <Button
@@ -24,7 +28,7 @@ export default function NotesApp() {
                 className="container container-sm d-flex"
                 style={{ gap: 25, flexWrap: 'wrap' }}>
                 {notes.map((note) => (
-                    <NewNote key={note.id} note={note} />
+                    <NewNote key={note.id} note={note} onClick={deleteNote} />
                 ))}
                 {/* {notes.map((n) => console.log(n.id))} */}
             </div>
