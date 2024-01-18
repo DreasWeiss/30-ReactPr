@@ -3,7 +3,7 @@ import { NoteStyle, Icons, DeleteIcon } from './NoteStyle'
 
 import { MdOutlineNoteAlt, MdDeleteForever } from 'react-icons/md'
 
-export default function NewNote() {
+export default function NewNote({ note }) {
     return (
         <NoteStyle className='card'>
             <div className="card-header text-right">
