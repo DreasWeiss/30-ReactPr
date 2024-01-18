@@ -1,9 +1,19 @@
 import React from 'react'
+import { NoteStyle, Icons, DeleteIcon } from './NoteStyle'
+
+import { MdOutlineNoteAlt, MdDeleteForever } from 'react-icons/md'
 
 export default function NewNote() {
     return (
-        <div>
-            <h1>NewNoteComp</h1>
-        </div>
+        <NoteStyle className='card'>
+            <div className="card-header text-right">
+                <Icons>
+                    <MdOutlineNoteAlt />
+                    <DeleteIcon>
+                        <MdDeleteForever />
+                    </DeleteIcon>
+                </Icons>
+            </div>
+        </NoteStyle>
     )
 }
