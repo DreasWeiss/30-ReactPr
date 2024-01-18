@@ -14,6 +14,9 @@ export default function NewNote() {
                     </DeleteIcon>
                 </Icons>
             </div>
+            <div className="card-body">
+                <textarea style={{ border: 'none', outline: 'none' }}></textarea>
+            </div>
         </NoteStyle>
     )
 }
