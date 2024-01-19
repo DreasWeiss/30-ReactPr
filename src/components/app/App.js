@@ -17,6 +17,7 @@ import DialogBox from '../projects/13-Dialog-Box/DialogBox';
 import SearchFilterApp from '../projects/14-Search-Filter-App/SearchFilterApp';
 import FormRegistrationWithValidation from '../projects/15-Simple-Form-Registration-with-Validation/FormRegistrationWithValidation';
 import NotesApp from '../projects/16-Notes-App/NotesApp';
+import ResponsiveNavigationWithHamburgerMenuOnSmallScreens from '../projects/17-Responsive-Navigation-With-Hamburger-Menu-On-Small-Screens';
 
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
       {/* <DialogBox /> */}
       {/* <SearchFilterApp /> */}
       {/* <FormRegistrationWithValidation /> */}
-      <NotesApp />
+      {/* <NotesApp /> */}
+      <ResponsiveNavigationWithHamburgerMenuOnSmallScreens />
     </div>
   );
 }
