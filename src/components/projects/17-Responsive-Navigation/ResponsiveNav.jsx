@@ -32,23 +32,42 @@ export default function ResponsiveNav() {
             )
         }
     }, [])
-    return (
-        <NavStyle className='navbar bg-primary text-light'>
-            <div className="navbar-logo">
-                <a href="#" className='navbar-brand'>Dreas Weiss</a>
-                {/* open and close icons */}
-                {showEl.hamburgerIcon && <AiOutlineMenu />}
-                {showEl.closeIcon && <AiOutlineClose />}
 
-            </div>
-            <div className="navbar-collapse">
-                {showEl.navbarNav ? (
-                    <ul className="navbar-items">
-                        <NavItem text={'Home'} active='active' />
-                        <NavItem text={'About'} />
-                        <NavItem text={'Contact'} />
-                    </ul>) : null}
-            </div>
-        </NavStyle>
+    const openNav = () => {
+        setShowEl({
+            navbarNav: true,
+            hamburgerIcon: false,
+            closeIcon: true,
+            navOpened: true
+        })
+    }
+    const closeNav = () => {
+        setShowEl({
+            navbarNav: false,
+            hamburgerIcon: true,
+            closeIcon: false,
+            navOpened: false
+        })
+    }
+    return (
+        <>
+            <NavStyle className={`navbar bg-primary text-light ${showEl.navOpened && "showNavbar"}`}>
+                <div className="navbar-logo">
+                    <a href="#" className='navbar-brand'>Dreas Weiss</a>
+                    {/* open and close icons */}
+                    {showEl.hamburgerIcon && <AiOutlineMenu onClick={openNav} />}
+                    {showEl.closeIcon && <AiOutlineClose onClick={closeNav} />}
+
+                </div>
+                <div className="navbar-collapse">
+                    {showEl.navbarNav ? (
+                        <ul className={`navbar-items ${showEl.navOpened && "showNavbar"}`}>
+                            <NavItem text={'Home'} active='active' />
+                            <NavItem text={'About'} />
+                            <NavItem text={'Contact'} />
+                        </ul>) : null}
+                </div>
+            </NavStyle>
+        </>
     )
 }
