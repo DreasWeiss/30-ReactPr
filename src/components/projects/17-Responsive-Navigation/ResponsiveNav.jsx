@@ -14,6 +14,8 @@ export default function ResponsiveNav() {
         navOpened: false
     })
 
+    const [pageTitle, setPageTitle] = useState('')
+
     useEffect(() => {
         window.onresize = () => {
             let windowWidth = window.innerWidth;
@@ -49,6 +51,13 @@ export default function ResponsiveNav() {
             navOpened: false
         })
     }
+
+    const handleActive = (e) => {
+        document.querySelectorAll('.nav-link').forEach((navLink) => navLink.classList.remove('active'));
+        e.target.classList.add('active');
+        setPageTitle(e.target.innerText);
+    }
+
     return (
         <>
             <NavStyle className={`navbar bg-primary text-light ${showEl.navOpened && "showNavbar"}`}>
@@ -62,12 +71,13 @@ export default function ResponsiveNav() {
                 <div className="navbar-collapse">
                     {showEl.navbarNav ? (
                         <ul className={`navbar-items ${showEl.navOpened && "showNavbar"}`}>
-                            <NavItem text={'Home'} active='active' />
-                            <NavItem text={'About'} />
-                            <NavItem text={'Contact'} />
+                            <NavItem text={'Home'} active='active' onClick={handleActive} />
+                            <NavItem text={'About'} onClick={handleActive} />
+                            <NavItem text={'Contact'} onClick={handleActive} />
                         </ul>) : null}
                 </div>
             </NavStyle>
+            <h1 className="title text-center text-primary">{!pageTitle ? 'Home' : pageTitle}</h1>
         </>
     )
 }
