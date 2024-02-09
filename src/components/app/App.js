@@ -18,6 +18,7 @@ import SearchFilterApp from '../projects/14-Search-Filter-App/SearchFilterApp';
 import FormRegistrationWithValidation from '../projects/15-Simple-Form-Registration-with-Validation/FormRegistrationWithValidation';
 import NotesApp from '../projects/16-Notes-App/NotesApp';
 import ResponsiveNav from '../projects/17-Responsive-Navigation/ResponsiveNav';
+import TextAnimation from '../projects/18-Text-Animation/TextAnimation';
 
 
 
@@ -40,7 +41,8 @@ function App() {
       {/* <SearchFilterApp /> */}
       {/* <FormRegistrationWithValidation /> */}
       {/* <NotesApp /> */}
-      <ResponsiveNav />
+      {/* <ResponsiveNav /> */}
+      <TextAnimation />
     </div>
   );
 }
